@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/main.scss" />
+    <title>Students HW</title>
+  </head>
+  <body>
+    <div id="root">
+      <main class="main">
+        <section class="students students--table">
+          <h2 class="students__title">Список студентів</h2>
+          <button class="students__btn" data-students-load>
+            Отримати студентів
+          </button>
+          <table class="students__table">
+            <thead class="students__thead">
+              <tr class="students__tr">
+                <th class="students__th">ID</th>
+                <th class="students__th">Ім'я</th>
+                <th class="students__th">Вік</th>
+                <th class="students__th">Курс</th>
+                <th class="students__th">Навички</th>
+                <th class="students__th">Email</th>
+                <th class="students__th">Статус</th>
+              </tr>
+            </thead>
+            <tbody class="students__tbody" data-students-body></tbody>
+          </table>
+        </section>
+
+        <section class="students students--form">
+          <h2 class="students__title">Додати нового студента</h2>
+
+          <form class="students__form" data-students-form>
+            <label class="students__label"
+              >Ім'я:
+              <input
+                class="students__input"
+                type="text"
+                name="studentName"
+                id="name"
+                required
+              />
+            </label>
+            <label class="students__label"
+              >Вік:
+              <input
+                class="students__input"
+                type="number"
+                name="studentAge"
+                id="age"
+                required
+              />
+            </label>
+            <label class="students__label"
+              >Курс:
+              <input
+                class="students__input"
+                type="text"
+                name="studentCourse"
+                id="course"
+                required
+              />
+            </label>
+            <label class="students__label"
+              >Навички (через кому):
+              <input
+                class="students__input"
+                type="text"
+                name="studentSkills"
+                id="skills"
+                required
+              />
+            </label>
+            <label class="students__label"
+              >Email:
+              <input
+                class="students__input"
+                type="email"
+                name="studentEmail"
+                id="email"
+                required
+              />
+            </label>
+            <label class="students__label students__label--isEnrolled"
+              >Записаний:
+              <input
+                class="students__input"
+                type="checkbox"
+                name="studentIsEnrolled"
+                id="isEnrolled"
+              />
+            </label>
+            <button class="students__btn students__btn--submit" type="submit">
+              Додати студента
+            </button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+{{#each this}}
+  <tr class="students__tr" data-student="{{_id}}">
+    <td class="students__td">
+      <span class="students__view">{{_id}}</span>
+      <button
+        class="students__edit students__edit--save"
+        data-studentAction="save"
+      >Зберегти зміни</button>
+    </td>
+    <td class="students__td"><span class="students__view">{{name}}
+      </span>
+      <input
+        class="students__edit"
+        type="text"
+        value="{{name}}"
+        data-studentField="name"
+      />
+    </td>
+    <td class="students__td"><span class="students__view">{{age}}
+      </span>
+      <input
+        class="students__edit"
+        type="text"
+        value="{{age}}"
+        data-studentField="age"
+      />
+    </td>
+    <td class="students__td"><span class="students__view">{{course}}
+      </span>
+      <input
+        class="students__edit"
+        type="text"
+        value="{{course}}"
+        data-studentField="course"
+      />
+    </td>
+    <td class="students__td">
+      <span class="students__view">{{#each skills}} {{this}} {{/each}}</span>
+      <input
+        class="students__edit"
+        type="text"
+        value="{{skills}}"
+        data-studentField="course"
+      />
+    </td>
+    <td class="students__td"><span class="students__view">{{email}}
+      </span>
+      <input
+        class="students__edit"
+        type="text"
+        value="{{email}}"
+        data-studentField="email"
+      /></td>
+    <td class="students__td">
+      <span class="students__view">{{#if isEnrolled}} Записаний{{else}}
+          Не записаний
+        {{/if}}</span>
+      <button
+        class="students__edit students__edit--delete"
+        data-studentAction="delete"
+      >Видалити студента</button>
+    </td>
+  </tr>
+{{/each}}
